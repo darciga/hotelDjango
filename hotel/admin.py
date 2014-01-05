@@ -1,8 +1,11 @@
 from django.contrib import admin
-from .models import Clientes,tipoHabitacion,habitaciones,Reservaciones
+from .models import cliente,tipoHabitacion,habitacion,reservacion
 
 # Register your models here.
-admin.site.register(Clientes)
+class reservacionAdmin(admin.ModelAdmin):
+    list_display = ('id','cliente','habitacion','fechaEnt','fechaSal','estado')
+
+admin.site.register(cliente)
 admin.site.register(tipoHabitacion)
-admin.site.register(habitaciones)
-admin.site.register(Reservaciones)
+admin.site.register(habitacion)
+admin.site.register(reservacion, reservacionAdmin)

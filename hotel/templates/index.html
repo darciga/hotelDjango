@@ -1,1 +1,10 @@
 {% extends 'layout.html' %}
+{% block contenido %}
+	{% for hab in habitaciones %}
+				<li>
+					<p>{{hab.nombre}}</p>
+				</li>
+			{% empty %}
+				<strong>No hay nada</strong>
+		{% endfor %}				
+{% endblock %}

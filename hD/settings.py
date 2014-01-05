@@ -49,8 +49,6 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'hD.urls'
-
 WSGI_APPLICATION = 'hD.wsgi.application'
 
 
