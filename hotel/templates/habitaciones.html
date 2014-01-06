@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% block title %}Habitaciones - Hotel Palmira {% endblock %}
+{% block activate2 %}active{% endblock %}
+{% block contenido %}
+	{% for th in tipohabs %}
+	<li>
+		<p>{{th.nombre}}</p>
+	</li>
+		{% empty %}
+		<strong>No hay registros</strong>
+	{% endfor%}
+{% endblock %}

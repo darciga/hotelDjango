@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django_evolution',
     'hotel',
+    'areaAdmin'
 )
 
 MIDDLEWARE_CLASSES = (

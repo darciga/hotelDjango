@@ -30,7 +30,7 @@
 			<div class="row">
 				<!-- start header -->
 				<div class="span5 logo">
-					<a href="#">
+					<a href="{% url 'index' %}">
 					<div class="row">
 						<div class="span3 logo">
 							<h1>Hotel<span>Palmira</span></h1>
@@ -46,17 +46,17 @@
 							<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
 							<div class="nav-collapse">
 								<ul class="nav nav-pills">
-									<li class="active">
-										<a href="#">Inicio</a>
+									<li class="{% block activate1 %} {% endblock %}">
+										<a href="{% url 'index' %}">Inicio</a>
 									</li>
-									<li class="">
+									<li class="{% block activate2 %} {% endblock %}">
 										<a href="{% url 'viewtipoHab' %}">Habitaciones</a>
 									</li>
-									<li class="">
-										<a href="#">Ubicación</a>
+									<li class="{% block activate3 %} {% endblock %}">
+										<a href="{% url 'ubicacion' %}">Ubicación</a>
 									</li>
-									<li class="">
-										<a href="#">Inicia Sesión</a>
+									<li class="{% block activate4 %} {% endblock %}">
+										<a href="{% url 'login' %}">Inicia Sesión</a>
 									</li>
 								</ul>
 							</div><!-- /.nav-collapse -->

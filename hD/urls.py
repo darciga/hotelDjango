@@ -12,6 +12,8 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
     #incluimos las urls de archivo de la aplicacion hotel
     url(r'^',include('hotel.urls')),
+    #incluimos las urls de archivo de la aplicacion areaAdmin
+    url(r'^hp-admin/',include('areaAdmin.urls')),
     
     url(r'^admin/', include(admin.site.urls)),
 )

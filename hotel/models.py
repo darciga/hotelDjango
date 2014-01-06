@@ -18,6 +18,7 @@ class cliente(models.Model):
 class tipoHabitacion(models.Model):
     nombre = models.CharField(verbose_name = 'Nombre', max_length = 40)
     precio = models.FloatField(verbose_name = 'Precio', blank = True, null = True)
+    imagen = models.CharField(verbose_name = 'Nombre de la imagen con su extension', blank = True, max_length = 50, null = True)
     
     class Meta:
         verbose_name = u'Tipo habitacion'

@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% block title %}Ubicación - Hotel Palmira {% endblock %}
+{% block activate3 %}active{% endblock %}
+{% block contenido %}
+<div class="row">
+	<div class="span12">
+		<br />
+		<br />
+		<h1>Mapa y atracciones locales</h1>
+		<br />
+	</div>
+	<div class="span3 sidebar">
+
+		<ul class="nav">
+			<li>
+				<a class="active" href="ubicacions.php"><span>Area</span> General</a>
+			</li>
+			<li>
+				<a href="https://www.google.com.mx/maps/preview#!q=bares+Jiquilpan+de+Ju%C3%A1rez&data=!4m11!1m10!2i5!4m8!1m3!1d25073!2d-102.7145361!3d20.0004635!3m2!1i1366!2i642!4f13.1" target="_blank" ><span>Bares</span></a>
+			</li>
+		</ul>
+		<br />
+	</div>
+
+	<div class="span9">
+		<p>
+			Jiquilpan de Juárez, ciudad mexicana y cabecera del municipio de Jiquilpan, y cabecera del Distrito 04 Local y a nivel Federal,en el estado de Michoacán de Ocampo. Se encuentra a 1.560 m de altitud, en la margen derecha del río Jiquilpan, que se une al río Jaripo para desembocar en el lago de Chapala. Su clima es templado, con veranos cálidos y precipitaciones de junio a septiembre. Es un centro comercial, agrícola y ganadero. Sus productos agrícolas son maíz, frijol, trigo, cebada y garbanzo. Se elaboran productos derivados de la leche, que es una industria muy próspera en la ciudad.
+		</p>
+
+		<div id="map_canvas"></div>
+
+		<div class="row">
+			<div class="span4">
+				<h3> Atracciones Locales </h3>
+				<ul>
+					<li>
+						Biblioteca Pública <small>(murales de José Clemente Orozco)</small>
+					</li>
+					<li>
+						Museo del que era antes Centro de Estudios de la Revolución Mexicana "Lázaro Cárdenas" CERMLC y ahora es la Unidad Académica de Estudios Regionales de la UNAM
+					</li>
+					<li>
+						Escuela Francisco I. Madero <small>(Murales de Roberto Cueva del Río) </small>
+					</li>
+					<li>
+						CIIDIR-Michoacán. Instituto Politécnico Nacional. <small>(Pinturas de Roberto Cueva del Río)</small>
+					</li>
+					<li>
+						Parroquia San Francisco.
+					</li>
+					<li>
+						Templo del Sagrado Corazón.
+					</li>
+					<li>
+						Capilla de Santa Anita
+					</li>
+					<li>
+						Templo de la Virgen de los Remedios en Totolán.
+					</li>
+					<li>
+						Fuente de Zalate.
+					</li>
+					<li>
+						Fuente de la Aguadora.
+					</li>
+					<li>
+						Bosque Cuauhtémoc.
+					</li>
+					<li>
+						Fuente de Tres guerras
+					</li>
+					<li>
+						Santuario de Nuestra Señora de Guadalupe.
+					</li>
+					<li>
+						Parroquia de San Cayetano
+					</li>
+				</ul>
+			</div>
+			<div class="span4 offset1">
+
+				<h3> Festividades </h3>
+				<ul>
+					<li>
+						Marzo/abril: Semana Santa.
+					</li>
+					<li>
+						18 de marzo: Conmemoración de la Expropiación Petrolera.
+					</li>
+					<li>
+						13 de abril: Aniversario de elevación a Rango de Ciudad (1891)
+					</li>
+					<li>
+						21 de mayo: Natalicio del General Lázaro Cárdenas.
+					</li>
+					<li>
+						4 de octubre: Fiesta en Honor de San Francisco de Asís.
+					</li>
+					<li>
+						19 de octubre: Conmemoración de la muerte del General Lázaro Cárdenas.
+					</li>
+					<li>
+						20 de noviembre: Aniversario de la Revolución Mexicana.
+					</li>
+					<li>
+						1-12 de diciembre: Fiesta de la Virgen de Guadalupe.
+					</li>
+					<li>
+						24 de diciembre - 2 de febrero: Fiesta del "niño de la cofradía" Danza de los Negros
+					</li>
+				</ul>
+			</div>
+		</div>
+		<br />
+		<br />
+	</div>
+</div>
+{% endblock %}

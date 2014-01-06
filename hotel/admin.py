@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import cliente,tipoHabitacion,habitacion,reservacion
+from hotel.models import cliente,tipoHabitacion,habitacion,reservacion
 
 # Register your models here.
 class reservacionAdmin(admin.ModelAdmin):
