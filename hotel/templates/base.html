@@ -64,6 +64,7 @@
 					</div><!-- /navbar -->
 				</div>
 			</div><!-- end header -->
+			</div>
 			{% block contenido %}
 			
 			{% endblock %}
@@ -97,12 +98,13 @@
 							<ul class="thumbnails">
 								<li class="span2">
 									<div class="thumbnail">
-										<!-- <img src="css/images/airlines/Pueblo-Mágico.jpg" alt="" />-->
+										
+										<img src="{% static "css/images/airlines/Pueblo-Magico.jpg" %}" alt="" />
 									</div>
 								</li>
 								<li class="span2">
 									<div class="thumbnail">
-										<!-- <img src="css/images/airlines/viajesnavacastro.jpg" alt="" /> -->
+										<img src="{% static "css/images/airlines/viajesnavacastro.jpg" %}" alt="" />
 									</div>
 								</li>
 							</ul>
@@ -110,6 +112,6 @@
 					</div>
 				</div>
 			</footer>
-		</div>
+		
 	</body>
 </html>
