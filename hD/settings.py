@@ -62,8 +62,8 @@ DATABASES = {
         'NAME': 'hD',
         'USER': 'root',
         'PASSWORD': 'Dnt123',
-        'HOST':'',
-        'PORT':'',
+        'HOST':'/home/dante/lampstack-5.4.23-0/mysql/tmp/mysql.sock',
+        'PORT':'3306',
     }
 }
 

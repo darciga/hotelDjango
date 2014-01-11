@@ -2,26 +2,20 @@
 {% load static from staticfiles %}
 {% block activate1 %}active{% endblock %}
 {% block contenido %}
-<!-- slider -->
-<div class="row-fluid slideshow-row">
-	<div class="span12 slideshow">
-		<div class="slider-wrapper theme-default">
-			<div class="ribbon"></div>
-			
-			<link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}" type="text/css" />
-			<div id="nivoslider-125" class="nivoSlider">
-				
-				<img src="{% static "css/images/1.jpg" %}" alt=""/>
-				<img src="{% static "css/images/2.jpg" %}" alt=""/>
-				<img src="{% static "css/images/3.jpg" %}" alt=""/>
-				
+<!--Comienza slider-->
+		<div class="row-fluid slideshow-row">
+			<div class="span12 slideshow">
+				<div class="slider-wrapper theme-default">
+					<div class="ribbon"></div>
+					<div id="nivoslider-125" class="nivoSlider">
+						<img src="{% static "css/images/1.jpg" %}" alt=""/>
+						<img src="{% static "css/images/2.jpg" %}" alt=""/>
+						<img src="{% static "css/images/3.jpg" %}" alt=""/>
+					</div>
+				</div>
+				<div id="nivoslider-125-caption-0" class="nivo-html-caption">You can add captions too&#8230;</div>
 			</div>
-		</div>
-		<div id="nivoslider-125-caption-0" class="nivo-html-caption"></div>
-	</div>
-
-</div>
-<!-- end slider -->
+		</div><!--Fin slider-->
 
 <div class="row-fluid home">
 	<div class="span12">
