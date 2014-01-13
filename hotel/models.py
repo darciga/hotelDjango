@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.template import defaultfilters
 
 # Create your models here.
 class cliente(models.Model):
@@ -18,8 +19,14 @@ class cliente(models.Model):
 class tipoHabitacion(models.Model):
     nombre = models.CharField(verbose_name = 'Nombre', max_length = 40)
     precio = models.FloatField(verbose_name = 'Precio', blank = True, null = True)
-    imagen = models.CharField(verbose_name = 'Nombre de la imagen con su extension', blank = True, max_length = 50, null = True)
-    
+    imagentipo  = models.ImageField(upload_to = 'uploads/tipoHabitacion/', blank = True, null = True,verbose_name = 'Imagen del tipo de habitacion')
+    descripcion = models.CharField(verbose_name = 'Descripcion',max_length=100,blank=True,null=True)
+    slug = models.SlugField(max_length=100,blank=True,null=True)
+
+    def save(self,*args,**kwargs):
+        self.slug = defaultfilters.slugify(self.nombre)
+        super(tipoHabitacion,self).save(*args,**kwargs)
+
     class Meta:
         verbose_name = u'Tipo habitacion'
         verbose_name_plural = u'Tipo habitacion'
@@ -32,8 +39,13 @@ class habitacion(models.Model):
     tipo = models.ForeignKey(tipoHabitacion, verbose_name = 'Tipo de habitacion')
     estado = models.IntegerField(verbose_name = 'Estado', default = 1, help_text = 'Ocupada 0, Desocupada 1, Mantenimiento 2')
     descripcion = models.CharField(verbose_name = 'Descripcion de la habitacion', max_length = 255)
-    imagen = models.CharField(verbose_name = 'Nombre de la imagen con su extension',max_length = 50)
-    
+    imagenhab  = models.ImageField(upload_to = 'uploads/Habitaciones/', blank = True, null = True,verbose_name = 'Imagen de la habitacion')
+    slug = models.SlugField(max_length=100,blank=True,null=True)
+
+    def save(self,*args,**kwargs):
+        self.slug = defaultfilters.slugify(self.nombre)
+        super(habitacion,self).save(*args,**kwargs)
+
     class Meta:
         verbose_name = u'Habitacion'
         verbose_name_plural = u'Habitaciones'
