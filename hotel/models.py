@@ -19,7 +19,7 @@ class cliente(models.Model):
 class tipoHabitacion(models.Model):
     nombre = models.CharField(verbose_name = 'Nombre', max_length = 40)
     precio = models.FloatField(verbose_name = 'Precio', blank = True, null = True)
-    imagentipo  = models.ImageField(upload_to = 'uploads/tipoHabitacion/', blank = True, null = True,verbose_name = 'Imagen del tipo de habitacion')
+    imagentipo  = models.ImageField(upload_to = 'tipoHabitacion/', blank = True, null = True,verbose_name = 'Imagen del tipo de habitacion')
     descripcion = models.CharField(verbose_name = 'Descripcion',max_length=100,blank=True,null=True)
     slug = models.SlugField(max_length=100,blank=True,null=True)
 
@@ -39,7 +39,7 @@ class habitacion(models.Model):
     tipo = models.ForeignKey(tipoHabitacion, verbose_name = 'Tipo de habitacion')
     estado = models.IntegerField(verbose_name = 'Estado', default = 1, help_text = 'Ocupada 0, Desocupada 1, Mantenimiento 2')
     descripcion = models.CharField(verbose_name = 'Descripcion de la habitacion', max_length = 255)
-    imagenhab  = models.ImageField(upload_to = 'uploads/Habitaciones/', blank = True, null = True,verbose_name = 'Imagen de la habitacion')
+    imagenhab  = models.ImageField(upload_to = 'Habitaciones/', blank = True, null = True,verbose_name = 'Imagen de la habitacion')
     slug = models.SlugField(max_length=100,blank=True,null=True)
 
     def save(self,*args,**kwargs):
