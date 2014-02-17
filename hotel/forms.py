@@ -8,7 +8,8 @@ class loginForm(forms.Form):
         label = 'Nombre de usuario',
         widget = forms.TextInput(
             attrs = {
-            'class':'input-block-level',
+            'class':'input-xlarge',
+            'autofocus':'autofocus',
             'placeholder':'Nombre de usuario',
         }))
     password = forms.CharField(

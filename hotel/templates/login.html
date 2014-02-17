@@ -3,5 +3,38 @@
 {% block title %}Inicio de sesión - Hotel Palmira {% endblock %}
 {% block activate4 %}active{% endblock %}
 {% block contenido %}
+<div class="span6">
+	<form action="." method="post" class="form-horizontal">{% csrf_token %}
+	<fieldset class="well">
+		<div id="legend">
+			<legend class="">
+				Inicia Sesion
+			</legend>
+		</div>
+		<div class="control-group">
+			<label for="username" class="control-label">Nombre de usuario</label>
+			<div class="controls">
+				{{formLog.}}
+			</div>
+		</div>
+		<div class="control-group">
+		<!-- Password-->
+			<label class="control-label" for="password">Contraseña</label>
+			<div class="controls">
+				<input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+			</div>
+		</div>
+		<div class="control-group">
+		<!-- Button -->
+			<div class="span3">
+				<button class="btn btn-success" type="submit">
+				Login
+				</button>
+			</div>
+		</div>
+	</fieldset>
+		
+	</form>
+</div>
 <a href="{% url 'registro' %}">Registro</a>
 {% endblock %}

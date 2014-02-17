@@ -36,9 +36,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_evolution',
-    'hotel',
-    'areaAdmin',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -58,19 +55,19 @@ WSGI_APPLICATION = 'hD.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'hD',
-        'USER': 'root',
-        'PASSWORD': 'Dnt123',
-        'HOST':'/home/dante/lampstack-5.4.23-0/mysql/tmp/mysql.sock',
-        'PORT':'3306',
+        'ENGINE': 'django.db.backends',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST':'',
+        'PORT':'',
     }
 }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-Es'
 
 TIME_ZONE = 'UTC'
 
@@ -85,10 +82,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
-
-#Agrege esto
-TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
-
-ROOT_URLCONF = 'hD.urls'
-
-STATIC_ROOT = ''

@@ -6,7 +6,9 @@
 	{% for th in tipohabs %}
 	<li>
 		<p>{{th.nombre}}</p>
+		<img src='{{MEDIA_URL}}{{th.imagentipo}}'>
 	</li>
+		
 		{% empty %}
 		<strong>No hay registros</strong>
 	{% endfor%}
